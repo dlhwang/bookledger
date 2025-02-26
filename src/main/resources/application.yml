@@ -1,0 +1,44 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb  # 메모리 모드 (기본)
+    # url: jdbc:h2:file:./data/testdb  # 파일 모드 (선택 사항)
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    open-in-view: false
+
+  h2:
+    console:
+      enabled: true  # H2 콘솔 활성화
+      path: /h2-console  # 접속 경로 설정
+
+logging:
+  config: classpath:logback-local.xml
+  org:
+    springframework:
+      security: INFO
+      web: DEBUG  # Spring Web 관련 로깅 레벨 DEBUG
+    hibernate:
+      SQL: DEBUG  # Hibernate SQL 로깅
+      type: TRACE  # SQL 바인딩된 값도 로그에 출력
+
+springdoc:
+  api-docs:
+    enabled: true  # API 문서 활성화
+    path: /v3/api-docs
+  swagger-ui:
+    enabled: true  # Swagger UI 활성화
+    path: /swagger-ui.html  # 접속 경로
+
+
+jwt:
+  secretKey: d2VmdW4tYXBpLXN0YWdlLWFjY2Vzcy1zZWNyZXQta2V5LTE2NDQtNDYyNC13ZWZ1bjIwMjAhIQo=
+  refresh-secretKey: d2VmdW4tYXBpLXN0YWdlLXJlZnJlc2gtc2VjcmV0LWtleS0xNjQ0LTQ2MjQtd2VmdW4yMDIwISEK
+  refresh-expired-minutes: 20160
