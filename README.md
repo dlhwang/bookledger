@@ -59,7 +59,7 @@ H2 데이터베이스를 사용하여 개발 환경을 구성하였습니다.
 - API 문서
 - 유닛 테스트
 
-![도서 관리 장부 도메인 모델 입니다](./도서 관리 장부.png)
+![도서 관리 장부 도메인 모델 입니다](https://github.com/user-attachments/assets/c90bfe3c-50ea-4a0e-be3b-02f8fea0ccf3)
 
 ---
 
