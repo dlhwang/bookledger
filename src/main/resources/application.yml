@@ -36,9 +36,3 @@ springdoc:
   swagger-ui:
     enabled: true  # Swagger UI 활성화
     path: /swagger-ui.html  # 접속 경로
-
-
-jwt:
-  secretKey: d2VmdW4tYXBpLXN0YWdlLWFjY2Vzcy1zZWNyZXQta2V5LTE2NDQtNDYyNC13ZWZ1bjIwMjAhIQo=
-  refresh-secretKey: d2VmdW4tYXBpLXN0YWdlLXJlZnJlc2gtc2VjcmV0LWtleS0xNjQ0LTQ2MjQtd2VmdW4yMDIwISEK
-  refresh-expired-minutes: 20160
